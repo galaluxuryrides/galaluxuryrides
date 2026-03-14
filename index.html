@@ -466,7 +466,7 @@
     </div>
   </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>  <script>
     // Language switcher
     function setLang(lang) {
       if (lang === 'es') {
@@ -521,4 +521,15 @@
             form.style.display = 'none';
             successBox.style.display = 'block';
           } else {
-            btn.textContent = 'Something went wrong.
+            btn.textContent = 'Something went wrong. Please try again.';
+            btn.disabled = false;
+          }
+        }).catch(function() {
+          btn.textContent = 'Something went wrong. Please try again.';
+          btn.disabled = false;
+        });
+      });
+    }
+  </script>
+</body>
+</html>
